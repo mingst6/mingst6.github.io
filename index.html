@@ -1,16 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mingst's</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #357abd;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2a5f94;
+        }
+
+        /* Main content area */
+        .main-content {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Content section */
+        .content {
+            flex: 2;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content h2 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .content article {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content article:last-child {
+            border-bottom: none;
+        }
+
+        .content article h3 {
+            color: #357abd;
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h3 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: white;
+            border-radius: 5px;
+            border-left: 4px solid #4a90e2;
+        }
+
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #4a90e2;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>My Website</h1>
+            <p>Welcome to my basic layout demonstration</p>
+        </header>
 
-<h1>If you are here, what are you doing here?</h1>
-<p>Below is where I am, every day.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-<h2>HTML Image</h2>
-<img src="/files/background-meme5.jpg" alt="Funny Background" width="500" height="500">
+        <div class="main-content">
+            <main class="content">
+                <h2>Main Content</h2>
+                
+                <article>
+                    <h3>Welcome to Our Website</h3>
+                    <p>This is the main content area where you can display your primary information, blog posts, or any other content you want to highlight. The layout follows a classic web design pattern with a header, navigation, main content area, sidebar, and footer.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </article>
 
+                <article>
+                    <h3>About This Layout</h3>
+                    <p>This HTML page demonstrates a basic website layout structure that includes all the essential components of a modern web page. The design is responsive and will adapt to different screen sizes.</p>
+                    <p>The layout uses CSS Flexbox for positioning and includes hover effects and smooth transitions to enhance user experience.</p>
+                </article>
+
+                <article>
+                    <h3>Features</h3>
+                    <p>Key features of this layout include:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Responsive design that works on mobile and desktop</li>
+                        <li>Clean, modern styling with CSS3</li>
+                        <li>Flexible layout using Flexbox</li>
+                        <li>Semantic HTML structure</li>
+                        <li>Hover effects and transitions</li>
+                    </ul>
+                </article>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li><a href="#">Recent Posts</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#">Tags</a></li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">Quick Links</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 My Website. All rights reserved. | Designed with HTML & CSS</p>
+        </footer>
+    </div>
 </body>
 </html>
-
